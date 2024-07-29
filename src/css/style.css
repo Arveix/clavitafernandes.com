@@ -22,23 +22,42 @@
     color: black;
 }
 
-.btn-svg {
+.btnSVG {
+    position: absolute;
     left: 0;
     top: 0;
-    position: absolute;
 }
 
-.btn-animation {
+.btnSVG__path {
     fill: none;
     stroke-width: 1px;
     stroke: white;
     stroke-dasharray: 348;
-    /* animation: dash 2s linear forwards; */
+    /* animation: dash2 0.5s ease-in-out forwards; */
 }
 
-@keyframes dash {
+.btnSVG__path--resume {
+    fill: none;
+    stroke-width: 1px;
+    stroke: white;
+    stroke-dasharray: 437.9;
+}
+
+@keyframes btnSVG__path {
     to {
         stroke-dashoffset: 348;
+    }
+}
+
+@keyframes btnSVG__path--resume {
+    to {
+        stroke-dashoffset: 437.9;
+    }
+}
+
+@keyframes dash2 {
+    to {
+        stroke-dashoffset: 0;
     }
 }
 
@@ -171,15 +190,15 @@ nav ul {
     transition: background-color 0.25s ease-out, color 0.25s ease-out;
 }
 
-.nav__item:hover .btn-animation {
-    animation: dash 0.5s ease-in-out forwards;
+.nav__item:hover .btnSVG__path {
+    animation: btnSVG__path 0.5s ease-in-out forwards;
 }
 
-/* .nav__item:hover {
+.nav__item:hover {
     background-color: white;
     color: black;
-    transition: backgroung-color 0.5s ease-out 0.5s, color 0.25s ease-in-out 0.5s;
-} */
+    transition: background-color 0.25s ease-in-out 0.5s, color 0.25s ease-in-out 0.5s;
+}
 
 .nav__item--backBtn {
     padding-top: 10px;
@@ -248,6 +267,7 @@ nav ul li:hover {
 .nav__item--active {
     position: relative;
     background-color: white;
+    /* background-color: rgba(119, 255, 0, 0.09); */
     color: black;
 }
 
@@ -379,6 +399,8 @@ nav ul li:hover {
 }
 
 .aboutContainer__resume {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,10 +408,17 @@ nav ul li:hover {
     /* margin-bottom: 10px; */
     padding: 20px 20px 15px 20px;
 
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: 50px;
 
     font-family: var(--text-font);
+}
+
+.aboutContainer__resume:hover {
+    animation: btnSVG__path--resume 0.5s ease-in-out forwards;
+    background-color: white;
+    color: black;
+    transition: background-color 0.25s ease-in-out 0.5s, color 0.25s ease-in-out 0.5s;
 }
 
 /* OLD CODE no longer in use */
@@ -793,12 +822,14 @@ nav ul li:hover {
 }
 
 .contactForm__sendBtn {
+    position: relative;
+
     display: block;
 
     width: 160px;
     margin: auto;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 15px 20px 10px 20px;
 
     font-family: var(--heading-font);
     font-size: 1.2em;
@@ -807,6 +838,7 @@ nav ul li:hover {
     background: none;
 
     border: 1px solid white;
+    /* border: none; */
     border-radius: 50px;
 
     cursor: pointer;
