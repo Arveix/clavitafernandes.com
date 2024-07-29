@@ -12,7 +12,7 @@
 
     <header>
         <nav>
-            <ul>    
+            <ul  class="nav--dekstop">    
                 <a href="index.html">
                     <li class="nav__item">
                         <svg class="btnSVG" height="43" width="152">
@@ -24,9 +24,6 @@
                 <hr class="nav__connector" />
                 <a href="work.html">
                     <li class="nav__item nav__item--active">    
-                        <svg class="btnSVG" height="43" width="152">
-                            <path class="btnSVG__path" d="M21 0.5 H130 A20.5, 20.5, 0 0 1, 130 41.5 H21 A20.5, 20.5, 0 0 1, 21 0.5" />
-                        </svg>
                         WORK
                     </li>
                 </a>
@@ -39,6 +36,13 @@
                         CONTACT
                     </li>
                 </a>
+            </ul>
+            <img class="nav--mobile__hamburger" id="hamburgerIcon" src="./src/icons/hamburger menu.svg" alt="Hamburger menu icon">
+            <ul class="nav--mobile">
+                <img class="nav--mobile__close" id="closeIcon" src="./src/icons/close.svg" alt="">
+                <a href="index.html"><li class="nav__item">ABOUT</li></a>
+                <a href="work.html"><li class="nav__item nav__item--active">WORK</li></a>
+                <a href="contact.html"><li class="nav__item">CONTACT</li></a>
             </ul>
         </nav>
         <!-- <hr class="headerToMain-connector" style="opacity: 0;" /> -->
@@ -75,5 +79,8 @@
         <a href="#top"><h3 class="toTop-container">TO THE TOP</h3></a>
         <p class="copyright-text">Copyright © 2024 Clavita Fernandes. All rights reserved.</p>
     </footer>
+
+    <script src="./src/js/mobileNav.js"></script>
+
 </body>
 </html>
