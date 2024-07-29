@@ -1,0 +1,11 @@
+.nav__item--active::after {
+    display: none;
+}
+
+.wrapper--col {
+    max-width: 1100px;
+}
+
+.work__section__row--ignite img {
+    /* height: 100%; */
+}
