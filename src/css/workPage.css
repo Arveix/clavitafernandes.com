@@ -9,3 +9,34 @@
 .work__section__row--ignite img {
     /* height: 100%; */
 }
+
+@media only screen and (max-width: 790px) {
+
+    header {
+        margin: 30px 0 40px 0;
+    }
+    
+    .nav--desktop {
+        display: none;
+    }
+
+    .nav--mobile__hamburger {
+        display: block;
+    }
+
+    .nav__item {
+        position: relative;
+
+        width: 100%;
+        padding: 15px 20px 10px 20px;
+
+        border: none;
+        border-radius: 0;
+        backdrop-filter: blur(0px);
+
+        text-align: center;
+        font-family: var(--text-font);
+
+        transition: none;
+    }
+}
