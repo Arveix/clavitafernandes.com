@@ -156,6 +156,11 @@ nav ul {
     z-index: 5;
 }
 
+.nav--mobile__icons {
+    display: flex;
+    align-items: center;
+}
+
 .nav--mobile a {
     width: 100%;
 }
@@ -164,6 +169,10 @@ nav ul {
     display: none;
     max-width: 30px;
     margin-left: auto;
+}
+
+.nav--mobile__back {
+    display: none;
 }
 
 .nav--mobile__close {
@@ -979,11 +988,17 @@ footer h3:hover {
         margin: 30px 0 40px 0;
     }
 
+
+
     .nav--desktop {
         display: none;
     }
 
     .nav--mobile__hamburger {
+        display: block;
+    }
+
+    .nav--mobile__back {
         display: block;
     }
 
@@ -1001,6 +1016,18 @@ footer h3:hover {
         font-family: var(--text-font);
 
         transition: none;
+    }
+
+    .work__section--4-col { 
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .work__section--3-col {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .work__section__column {
+        width: 100%;
     }
 
     .contactForm__section {
